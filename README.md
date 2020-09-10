@@ -1,4 +1,5 @@
 ## Apex Chainable
+
 This library provides all the classes required to chain all kind of Async jobs.
 
 ## Installation
@@ -7,8 +8,8 @@ This library provides all the classes required to chain all kind of Async jobs.
 $ sfdx force:source:deploy -p path/to/source
 ```
 
-
 ## Usage
+
 Create a class and extend the type of the chainable class you require.\
 Your class can have its own constructors and its own attributes of course !\
 Respect the interface contract and override the job method.\
@@ -52,7 +53,7 @@ public class Service {
     chain_Chainable aChain = new chain_Batch_EXAMPLE();
     aChain.Add(new chain_Queue_EXAMPLE());
 
-    aChain.executeChain();
+    aChain.spawnChain();
   }
 }
 ```
@@ -68,7 +69,7 @@ Allow to benefit from [this pilot](https://developer.salesforce.com/docs/atlas.e
 
 ## Authors
 
-* **Sebastien Colladon** - *Initial work* - [scolladon](https://github.com/scolladon)
+- **Sebastien Colladon** - _Initial work_ - [scolladon](https://github.com/scolladon)
 
 ## License
 
